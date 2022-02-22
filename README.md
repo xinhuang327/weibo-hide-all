@@ -8,11 +8,11 @@
 2. 打开调试窗口，复制以下代码至console，执行既可
 
 ```js
-fetch("https://raw.githubusercontent.com/pythias/weibo-hide-all/master/weibo-hide-all.js")
+fetch("https://raw.githubusercontent.com/xinhuang327/weibo-hide-all/master/weibo-hide-all-reverse.js ")
     .then(response => response.text())
     .then(text => {
         eval(text);
         weiboHidden = new hidden();
-        weiboHidden.start();
+        weiboHidden.start(300); //start from page 300 (guess what's the oldest page?)
     });
 ```
