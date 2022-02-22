@@ -14,7 +14,7 @@ hidden.prototype.reset = function () {
 hidden.prototype.hideNextPage = function () {
     this.reset();
     this.running = true;
-    this.page++;
+    this.page--;
     const url = 'https://weibo.com/ajax/statuses/mymblog?uid=' + $CONFIG['uid'] + '&page=' + this.page; //&feature=0
     let http = new XMLHttpRequest();
     http.open('GET', url, true);
@@ -107,7 +107,6 @@ hidden.prototype.start = function () {
     }
 
     console.log(`
-
  _    _      _ _             _   _ _     _     _            
 | |  | |    (_) |           | | | (_)   | |   | |           
 | |  | | ___ _| |__   ___   | |_| |_  __| | __| | ___ _ __  
@@ -117,7 +116,7 @@ hidden.prototype.start = function () {
 `);
     console.log("开始执行");
 
-    this.page = 0;
+    this.page = 100;
     this.hideNextPage();
 };
 
