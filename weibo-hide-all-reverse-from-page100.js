@@ -100,7 +100,7 @@ hidden.prototype.stop = function (message) {
     clearInterval(this.timer);
 };
 
-hidden.prototype.start = function () {
+hidden.prototype.start = function (startPage) {
     if (this.running) {
         console.log('正在进行中，请稍后或者刷新页面后再执行.');
         return;
@@ -116,9 +116,9 @@ hidden.prototype.start = function () {
 `);
     console.log("开始执行");
 
-    this.page = 100;
+    this.page = startPage;
     this.hideNextPage();
 };
 
-// weiboHidden = new hidden();
-// weiboHidden.start();
+//weiboHidden = new hidden();
+//weiboHidden.start(200);
